@@ -1,0 +1,49 @@
+﻿@model Wrapper
+
+<div class="text-center">
+    <h1 class="display-4">Register to this Cool Site!</h1>
+    <!-- <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a></p> -->
+</div>
+
+<div class="text-right">
+    <h2><a href="displaylogin">Login</a></h2>
+</div>
+
+<div class="text-left">
+   <form asp-action="Register" asp-controller="Home" method="Post">
+        <br>
+        <span style="color:red" asp-validation-for="NewUser.FirstName"></span>
+        <label asp-for="NewUser.FirstName"></label>
+        <input asp-for="NewUser.FirstName" type="text">
+        <br>
+        <span style="color:red" asp-validation-for="NewUser.LastName"></span>
+        <label asp-for="NewUser.LastName"></label>
+        <input asp-for="NewUser.LastName" type="text">
+        <br>
+        <br>
+        <span style="color:red" asp-validation-for="NewUser.Email"></span>
+        <br>
+        <label asp-for="NewUser.Email"></label>
+        <input asp-for="NewUser.Email" type="text">
+        <br>
+        <span style="color:red" asp-validation-for="NewUser.Password"></span>
+        <label asp-for="NewUser.Password"></label>
+        <input asp-for="NewUser.Password" type="password">
+        <br>
+        <br>
+        <span style="color:red" asp-validation-for="NewUser.Confirm"></span>
+        <label asp-for="NewUser.Confirm">Confirm Password</label>
+        <input asp-for="NewUser.Confirm" type="password">
+        <br>
+
+        <input value="Sign up Now" type="submit">
+    </form>
+
+
+
+
+</div>
+
+ 
+
+

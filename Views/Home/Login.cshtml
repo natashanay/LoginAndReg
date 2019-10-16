@@ -1,0 +1,26 @@
+@model Wrapper
+
+<div class="text-right">
+
+    <p><a asp-controller="Home" asp-action="Register">Register</a></p>
+
+</div>
+<div class="text-left">
+    <h1>Login to this Cool Site!</h1>
+    <form asp-action="Login" asp-controller="Home" method="POST">
+        <br>
+        <span style="color:red" asp-validation-for="NewLogUser.Email"></span>
+        <label asp-for="NewLogUser.Email"></label>
+        <input asp-for="NewLogUser.Email" type="text">
+        <br>
+        <span style="color:red" asp-validation-for="NewLogUser.Password"></span>
+        <label asp-for="NewLogUser.Password"></label>
+        <input asp-for="NewLogUser.Password" type="password">
+        <br>
+        <br>
+
+        <input value="Login Now" type="submit">
+    </form>
+
+
+</div>
